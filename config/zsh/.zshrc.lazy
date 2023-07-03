@@ -1,0 +1,28 @@
+### Aliases ###
+alias la='ls -a'
+alias ll='ls -al'
+
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias mkdir='mkdir -p'
+
+alias vi='nvim'
+alias vim='nvim'
+alias view='nvim -R'
+
+### brew ###
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+### asdf ###
+fpath=(${ASDF_DIR}/completions $fpath)
+autoload -Uz compinit && compinit
+
+
+### zsh plugins ###
+zinit wait lucid blockf light-mode for \
+    @'zsh-users/zsh-autosuggestions' \
+    @'zsh-users/zsh-completions' \
+    @'zsh-users/zsh-syntax-highlighting'
+    
+
